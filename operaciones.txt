@@ -1,0 +1,97 @@
+package com.mycompany.menu_operativo;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author ESTUDIANTE19
+ */
+public class Menu_operativo {
+
+    public static void main(String[] args) {
+       
+        int option;
+        int resultado = 0;
+        int num2;
+        int num3;
+        operaciones.welcome();
+        operaciones.tabla();   
+        option = Integer.parseInt(JOptionPane.showInputDialog(null,"ingresa la opcion de 1 a 6"));
+        num2 = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresa el numero"));
+        num3 = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresa el numero"));
+        
+        
+        operaciones.suma(option,num2,num3,resultado);
+        operaciones.resta(option, num2, num3, resultado);
+        operaciones.multiplicacion(option, num2, num3, resultado);
+        operaciones.division(option, num2, num3, resultado);
+        operaciones.salir();
+        
+        
+        
+        
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.mycompany.menu_operativo;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author ESTUDIANTE19
+ */
+public class operaciones {
+    
+    public static void welcome(){
+        JOptionPane.showMessageDialog(null, "bienvenido");
+    }
+    public static void tabla(){
+         JOptionPane.showMessageDialog(null, "1) suma \n2) resta \n3) multiplicacion \n4) division");
+    }
+    
+    public static int suma(int num1,int num2,int num3,int sumatoria){
+       if(num1 == 1){
+           sumatoria = num2 + num3;
+           JOptionPane.showMessageDialog(null,"El resultado es " + sumatoria);
+       }
+       return sumatoria;
+    }
+     public static int resta(int num1,int num2,int num3,int resta){
+       if(num1 == 2){
+           resta = num2 - num3;
+           JOptionPane.showMessageDialog(null,"El resultado es " + resta);
+       }
+       return resta;
+    }
+     public static int multiplicacion(int num1,int num2,int num3,int multiplicacion){
+       if(num1 == 3){
+           multiplicacion = num2 * num3;
+           JOptionPane.showMessageDialog(null,"El resultado es " + multiplicacion);
+       }
+       return multiplicacion;
+    }
+      public static int division(int num1,int num2,int num3,int division){
+       if(num1 == 4){
+           division = num2 * num3;
+           JOptionPane.showMessageDialog(null,"El resultado es " + division);
+       }
+       return division;
+    }
+       public static void salir(){
+       JOptionPane.showMessageDialog(null, "ha finalizado la operacion");
+    }
+}
