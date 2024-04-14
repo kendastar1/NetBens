@@ -19,6 +19,9 @@ public class matriz extends javax.swing.JFrame {
         initComponents();
     }
    public int Com = 0,Com1 = 0;
+   public int matriz1[][];
+   public StringBuilder stringBuilder = new StringBuilder();
+   public int numero;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -214,8 +217,8 @@ public class matriz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void matrizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matrizActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_matrizActionPerformed
+        
+    }
 
     private void L1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_L1ActionPerformed
         // TODO add your handling code here:
@@ -226,7 +229,7 @@ public class matriz extends javax.swing.JFrame {
     }//GEN-LAST:event_L2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    int numero;
+    
     
     
     
@@ -236,7 +239,7 @@ public class matriz extends javax.swing.JFrame {
      
      
     numero = Integer.parseInt(matriz.getSelectedItem().toString());
-    int matriz1[][] = new int [numero][numero];
+    matriz1 = new int [numero][numero];
 
     
     for(int a = 0; a < matriz1.length; a++){
@@ -246,7 +249,7 @@ public class matriz extends javax.swing.JFrame {
     }
 
     
-    StringBuilder stringBuilder = new StringBuilder();
+    
     for(int a = 0; a < matriz1.length; a++){
         for(int b = 0; b < matriz1[a].length; b++){
             stringBuilder.append("[\t"+matriz1[a][b]).append("\t]");
