@@ -134,6 +134,42 @@ public class matriz extends javax.swing.JFrame {
             }
         });
 
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
@@ -349,11 +385,11 @@ Numeros.setText(generarStringBuilder.toString());
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
        StringBuilder generarStringBuilder3 = new StringBuilder();
     for (int a = 0; a < matriz1.length; a++) {
-    if (a < 2) { // Primeras dos filas: de derecha a izquierda
+    if (a < 2) {
         for (int b = matriz1[a].length - 1; b >= 0; b--) {
             generarStringBuilder3.append(Integer.toString(matriz1[a][b]) + " ");
         }
-    } else { // Filas restantes: de izquierda a derecha
+    } else { 
         for (int b = 0; b < matriz1[a].length; b++) {
             generarStringBuilder3.append(Integer.toString(matriz1[a][b]) + " ");
         }
@@ -362,6 +398,182 @@ Numeros.setText(generarStringBuilder.toString());
 }
      resul.setText(generarStringBuilder3.toString());
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+     StringBuilder generarStringBuilder2 = new StringBuilder();
+for (int b = 0; b < matriz1[0].length; b++) {
+    if (b >= matriz1[0].length / 3 && b <= matriz1[0].length * 2 / 3) { 
+        for (int a = matriz1.length - 1; a >= 0; a--) {
+            generarStringBuilder2.append(Integer.toString(matriz1[a][b]) + " ");
+        }
+    } else if (b < matriz1[0].length / 3) {
+        for (int a = 0; a < matriz1.length; a++) {
+            generarStringBuilder2.append(Integer.toString(matriz1[a][b]) + " ");
+        }
+    } else {
+        for (int a = matriz1.length - 1; a >= 0; a--) {
+            generarStringBuilder2.append(Integer.toString(matriz1[a][b]) + " ");
+        }
+    }
+    generarStringBuilder2.append("\n");
+}
+resul.setText(generarStringBuilder2.toString());
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+ StringBuilder generarStringBuilder3 = new StringBuilder();
+for (int a = 0; a < matriz1.length; a++) {
+    if (a % 3 == 0) {
+        for (int b = 0; b < matriz1[a].length; b++) {
+            generarStringBuilder3.append(Integer.toString(matriz1[a][b]));
+            generarStringBuilder3.append(" ");
+        }
+    } else if (a % 3 == 1 || a % 3 == 2) {
+        for (int b = matriz1[a].length - 1; b >= 0; b--) {
+            generarStringBuilder3.append(Integer.toString(matriz1[a][b]));
+            generarStringBuilder3.append(" ");
+        }
+    }
+    generarStringBuilder3.append("\n");
+}
+resul.setText(generarStringBuilder3.toString());
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+       StringBuilder generarStringBuilder3 = new StringBuilder();
+for (int a = 0; a < matriz1.length; a++) {
+   
+    boolean primerasDosColumnas = (a < 2);
+    if (primerasDosColumnas) {
+       
+        for (int b = 0; b < matriz1[a].length; b++) {
+            generarStringBuilder3.append(Integer.toString(matriz1[b][a]) + " ");
+        }
+    } else {
+    
+        for (int b = matriz1[a].length - 1; b >= 0; b--) {
+            generarStringBuilder3.append(Integer.toString(matriz1[b][a]) + " ");
+        }
+    }
+    generarStringBuilder3.append("\n");
+}
+resul.setText(generarStringBuilder3.toString());
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+       StringBuilder generarStringBuilder3 = new StringBuilder();
+
+int inicioFila = 0;
+int finFila = matriz1.length - 1;
+int inicioColumna = 0;
+int finColumna = matriz1[0].length - 1;
+
+while (inicioFila <= finFila && inicioColumna <= finColumna) {
+  
+    for (int a = inicioColumna; a <= finColumna; a++) {
+        generarStringBuilder3.append(Integer.toString(matriz1[inicioFila][a]) + " ");
+    }
+    inicioFila++;
+
+
+    for (int a = inicioFila; a <= finFila; a++) {
+        generarStringBuilder3.append(Integer.toString(matriz1[a][finColumna]) + " ");
+    }
+    finColumna--;
+
+
+    if (inicioFila <= finFila) {
+        for (int a = finColumna; a >= inicioColumna; a--) {
+            generarStringBuilder3.append(Integer.toString(matriz1[finFila][a]) + " ");
+        }
+        finFila--;
+    }
+
+ 
+    if (inicioColumna <= finColumna) {
+        for (int a = finFila; a >= inicioFila; a--) {
+            generarStringBuilder3.append(Integer.toString(matriz1[a][inicioColumna]) + " ");
+        }
+        inicioColumna++;
+    }
+}
+
+resul.setText(generarStringBuilder3.toString());
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+      StringBuilder generarStringBuilder3 = new StringBuilder();
+
+int inicioFila = 0;
+int finFila = matriz1.length - 1;
+int inicioColumna = matriz1[0].length - 1;
+int finColumna = 0;
+
+while (inicioFila <= finFila && inicioColumna >= finColumna) {
+    // Imprimir desde la derecha hacia la izquierda (primera fila)
+    for (int a = inicioColumna; a >= finColumna; a--) {
+        generarStringBuilder3.append(Integer.toString(matriz1[inicioFila][a]) + " ");
+    }
+    inicioFila++;
+
+    // Imprimir de arriba hacia abajo (última columna)
+    for (int a = inicioFila; a <= finFila; a++) {
+        generarStringBuilder3.append(Integer.toString(matriz1[a][finColumna]) + " ");
+    }
+    finColumna++;
+
+    // Imprimir desde la izquierda hacia la derecha (última fila)
+    for (int a = finColumna; a <= inicioColumna; a++) {
+        generarStringBuilder3.append(Integer.toString(matriz1[finFila][a]) + " ");
+    }
+    finFila--;
+
+    // Imprimir de abajo hacia arriba (primera columna)
+    for (int a = finFila; a >= inicioFila; a--) {
+        generarStringBuilder3.append(Integer.toString(matriz1[a][inicioColumna]) + " ");
+    }
+    inicioColumna--;
+}
+
+resul.setText(generarStringBuilder3.toString());
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+      StringBuilder generarStringBuilder3 = new StringBuilder();
+
+int inicioFila = 0;
+int finFila = matriz1.length - 1;
+int inicioColumna = 0;
+int finColumna = matriz1[0].length - 1;
+
+while (inicioFila <= finFila && inicioColumna <= finColumna) {
+    // Imprimir desde arriba hacia abajo (primera columna)
+    for (int a = inicioFila; a <= finFila; a++) {
+        generarStringBuilder3.append(Integer.toString(matriz1[a][inicioColumna]) + " ");
+    }
+    inicioColumna++;
+
+    // Imprimir de izquierda hacia derecha (última fila)
+    for (int a = inicioColumna; a <= finColumna; a++) {
+        generarStringBuilder3.append(Integer.toString(matriz1[finFila][a]) + " ");
+    }
+    finFila--;
+
+    // Imprimir desde abajo hacia arriba (última columna)
+    for (int a = finFila; a >= inicioFila; a--) {
+        generarStringBuilder3.append(Integer.toString(matriz1[a][finColumna]) + " ");
+    }
+    finColumna--;
+
+    // Imprimir de derecha hacia izquierda (primera fila)
+    for (int a = finColumna; a >= inicioColumna; a--) {
+        generarStringBuilder3.append(Integer.toString(matriz1[inicioFila][a]) + " ");
+    }
+    inicioFila++;
+}
+
+resul.setText(generarStringBuilder3.toString());
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
