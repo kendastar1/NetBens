@@ -253,11 +253,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="b1">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\ESTUDIANTE19.DESKTOP-AG2B2N0.000\Downloads\arrows-switch-vertical_98216.png"/>
-        </Property>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b1ActionPerformed"/>
       </Events>
@@ -265,7 +260,7 @@
     <Component class="javax.swing.JButton" name="jButton6">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\ESTUDIANTE19.DESKTOP-AG2B2N0.000\Downloads\arrows-switch-horizontal_97678.png"/>
+          <Image iconType="2" name="C:\Users\ESTUDIANTE02\Downloads\Captura_de_pantalla_2024-04-22_134454-removebg-preview (1).png"/>
         </Property>
       </Properties>
       <Events>

@@ -4,6 +4,8 @@
  */
 package botonesimagenes;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -120,14 +122,13 @@ public class matriz extends javax.swing.JFrame {
             }
         });
 
-        b1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE19.DESKTOP-AG2B2N0.000\\Downloads\\arrows-switch-vertical_98216.png")); // NOI18N
         b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b1ActionPerformed(evt);
             }
         });
 
-        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE19.DESKTOP-AG2B2N0.000\\Downloads\\arrows-switch-horizontal_97678.png")); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\ESTUDIANTE02\\Downloads\\Captura_de_pantalla_2024-04-22_134454-removebg-preview (1).png")); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -510,25 +511,21 @@ int inicioColumna = matriz1[0].length - 1;
 int finColumna = 0;
 
 while (inicioFila <= finFila && inicioColumna >= finColumna) {
-    // Imprimir desde la derecha hacia la izquierda (primera fila)
-    for (int a = inicioColumna; a >= finColumna; a--) {
+        for (int a = inicioColumna; a >= finColumna; a--) {
         generarStringBuilder3.append(Integer.toString(matriz1[inicioFila][a]) + " ");
     }
     inicioFila++;
 
-    // Imprimir de arriba hacia abajo (última columna)
     for (int a = inicioFila; a <= finFila; a++) {
         generarStringBuilder3.append(Integer.toString(matriz1[a][finColumna]) + " ");
     }
     finColumna++;
 
-    // Imprimir desde la izquierda hacia la derecha (última fila)
     for (int a = finColumna; a <= inicioColumna; a++) {
         generarStringBuilder3.append(Integer.toString(matriz1[finFila][a]) + " ");
     }
     finFila--;
 
-    // Imprimir de abajo hacia arriba (primera columna)
     for (int a = finFila; a >= inicioFila; a--) {
         generarStringBuilder3.append(Integer.toString(matriz1[a][inicioColumna]) + " ");
     }
@@ -539,7 +536,7 @@ resul.setText(generarStringBuilder3.toString());
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-      StringBuilder generarStringBuilder3 = new StringBuilder();
+     StringBuilder generarStringBuilder4 = new StringBuilder();
 
 int inicioFila = 0;
 int finFila = matriz1.length - 1;
@@ -547,32 +544,37 @@ int inicioColumna = 0;
 int finColumna = matriz1[0].length - 1;
 
 while (inicioFila <= finFila && inicioColumna <= finColumna) {
-    // Imprimir desde arriba hacia abajo (primera columna)
+   
     for (int a = inicioFila; a <= finFila; a++) {
-        generarStringBuilder3.append(Integer.toString(matriz1[a][inicioColumna]) + " ");
+        generarStringBuilder4.append(Integer.toString(matriz1[a][inicioColumna]) + " ");
     }
     inicioColumna++;
 
-    // Imprimir de izquierda hacia derecha (última fila)
     for (int a = inicioColumna; a <= finColumna; a++) {
-        generarStringBuilder3.append(Integer.toString(matriz1[finFila][a]) + " ");
+        generarStringBuilder4.append(Integer.toString(matriz1[finFila][a]) + " ");
     }
     finFila--;
 
-    // Imprimir desde abajo hacia arriba (última columna)
     for (int a = finFila; a >= inicioFila; a--) {
-        generarStringBuilder3.append(Integer.toString(matriz1[a][finColumna]) + " ");
+        generarStringBuilder4.append(Integer.toString(matriz1[a][finColumna]) + " ");
     }
     finColumna--;
 
-    // Imprimir de derecha hacia izquierda (primera fila)
     for (int a = finColumna; a >= inicioColumna; a--) {
-        generarStringBuilder3.append(Integer.toString(matriz1[inicioFila][a]) + " ");
+        generarStringBuilder4.append(Integer.toString(matriz1[inicioFila][a]) + " ");
     }
     inicioFila++;
 }
 
-resul.setText(generarStringBuilder3.toString());
+String[] numeros = generarStringBuilder4.toString().split(" ");
+Collections.reverse(Arrays.asList(numeros));
+StringBuilder resultadoInvertido = new StringBuilder();
+for (String numero : numeros) {
+    resultadoInvertido.append(numero).append(" ");
+}
+
+resul.setText(resultadoInvertido.toString());
+
     }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
