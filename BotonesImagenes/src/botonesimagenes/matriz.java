@@ -37,6 +37,12 @@ public class matriz extends javax.swing.JFrame {
        jButton7.setPressedIcon(setIconopresionado("/imagenes/imagen5.png", jButton7, 4, 4));
        jButton9.setIcon(setIcono("/imagenes/imagen6.png", jButton9));
        jButton9.setPressedIcon(setIconopresionado("/imagenes/imagen6.png", jButton9, 4, 4));
+       jButton10.setIcon(setIcono("/imagenes/imagen7.png", jButton10));
+       jButton10.setPressedIcon(setIconopresionado("/imagenes/imagen7.png", jButton10, 4, 4));
+       jButton12.setIcon(setIcono("/imagenes/imagen8.png", jButton12));
+       jButton12.setPressedIcon(setIconopresionado("/imagenes/imagen8.png", jButton12, 4, 4));
+       jButton13.setIcon(setIcono("/imagenes/iamgen9.png", jButton13));
+       jButton13.setPressedIcon(setIconopresionado("/imagenes/iamgen9.png", jButton13, 4, 4));
         
         
         
