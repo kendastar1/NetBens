@@ -1,0 +1,11 @@
+la feria municipal requiere de un control y lo ha contratado a usted para ejecutar el desarrollo del sistema.el representante de la feria a indicado una serie de elementos a tener en cuenta: la feria se realiza el 1 al 10 de junio
+y estara abierta de 8 de la mañana a 10 de la noche.
+El espacio para los stands estan dimensionado en un lote tipo rectangular de 200 metros por 300 en la ferian se tendran 5 tipos de productos alimentos, bebidas, ropa, utensilios deportivos,farmacia.
+van a ejecutar 120 puestos repartidos entre los tipos ya descritos.
+Que se requiere controlar cuantos establecimientos por cada tipo hay.
+El total de personas que ingresan ala feria.
+El total de personas que se registran en cada establecimiento.
+El total de ventas de cada establecimiento.
+El total de valor de venta de cada establecimiento.
+Cual fue el establecimiento que  mas venta tubo y cual menos.
+Valor total vendido por tipo.
